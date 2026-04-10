@@ -10,15 +10,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null);
   const Navigate = useNavigate();
   const { addToCart, cartItems } = useCart();
-  const productInCart = 
-      cartItems.find(
-          item => item.id === product.id
-      );
-  
-  const productQuantityLabel = productInCart 
-      ? `(${productInCart.quantity})` 
-      : '';
-  
+
 
   useEffect(() => {
     const foundProduct = getProductById(id);
@@ -33,6 +25,16 @@ export default function ProductDetails() {
   if(!product){
     return <h1>Loading...</h1>
   }
+
+  const productInCart = 
+      cartItems.find(
+          item => item.id === product.id
+      );
+  
+  const productQuantityLabel = productInCart 
+      ? `(${productInCart.quantity})` 
+      : '';
+  
   
   return (
     <div className='page'>
