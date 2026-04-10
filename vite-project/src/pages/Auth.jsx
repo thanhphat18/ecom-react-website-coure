@@ -27,14 +27,12 @@ export default function Auth() {
             setError(result.error);
         }
 
-        console.log(result);
     }
     return (
     <div className='page'>
         <div className="container">
             <div className="auth-container">
                 {user && <p>Welcome, {user.email}!</p>}
-                <button onClick={() => logout()}>Log Out</button>
                 <h1 className="page-title">{mode === "signup" ? "Sign Up" : "Log In"}</h1>
                 <form className="auth-form" onSubmit={handleSubmit(onSubmit)}>
                     {error && <div className="error-message">{error}</div>}
