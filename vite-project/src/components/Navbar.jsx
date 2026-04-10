@@ -4,14 +4,14 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <Link to="/" className="navbar-logo">
+                <Link to="/" className="navbar-brand">
                     ShopHub
                 </Link>
                 <div className='navbar-links'>
-                    <Link to="/">
+                    <Link to="/" className='navbar-link'>
                         Home
                     </Link>
-                    <Link to="/checkout">
+                    <Link to="/checkout" className='navbar-link'>
                         Cart
                     </Link>
                 </div>
